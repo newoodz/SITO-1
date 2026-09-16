@@ -1411,3 +1411,15 @@ summary::-webkit-details-marker {
         line-height: 1.35;
     }
 }
+.map-placeholder {
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+.map-placeholder iframe {
+    display: block;
+    width: 100%;
+    border: 0;
+}
