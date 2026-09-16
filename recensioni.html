@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="it">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Recensioni | Officina del Gusto Rho</title>
+    <meta name="description" content="Leggi le recensioni dei clienti di Officina del Gusto a Rho.">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .review-grid article {
+            overflow: hidden;
+        }
+
+        .review-grid article p {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.65;
+        }
+
+        .review-short {
+            display: block;
+        }
+
+        .review-long {
+            display: none;
+        }
+
+        .review-long.show {
+            display: inline;
+        }
+
+        .read-more {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 9px 16px;
+            border: 1px solid currentColor;
+            border-radius: 30px;
+            background: transparent;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .read-more:hover {
+            opacity: 0.7;
+        }
+
+        .review-author {
+            display: block;
+            margin-top: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="site-header">
+
+        <a class="logo" href="index.html">
+            <span>OFFICINA</span>
+            <b>DEL GUSTO</b>
+        </a>
+
+        <button class="menu-toggle">☰</button>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="chi-siamo.html">Chi siamo</a>
+            <a href="prodotti.html">Prodotti</a>
+            <a class="active" href="recensioni.html">Recensioni</a>
+            <a class="nav-cta" href="contatti.html">Contatti</a>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section class="page-hero compact">
+
+            <p class="eyebrow">03 / RECENSIONI</p>
+
+            <h1>
+                Parlano<br>
+                <em>i clienti.</em>
+            </h1>
+
+        </section>
+
+
+        <section class="reviews section">
+
+            <div class="review-grid">
+
+
+                <!-- RECENSIONE 1 -->
+
+                <article>
+
+                    <div class="stars">★★★★★</div>
+
+                    <p>
+                        <span class="review-short">
+                            “Sapori autentici e artigianali.
+                            Sono stato tempo fa in questo negozio di prodotti artigianali alimentari e sono rimasto
+                            davvero colpito dalla qualità e dalla varietà dei prodotti offerti...
+                        </span>
+
+                        <span class="review-long">
+                            La birra artigianale è davvero eccellente, con una vasta gamma di sapori tra cui scegliere.
+                            Il vino è anche molto buono, con una selezione di vini locali e nazionali.
+                            Scaldatelli Top, fatti a mano con ingredienti freschi e sono davvero deliziosi.
+                            Il proprietario del negozio è molto gentile e appassionato dei suoi prodotti.
+                            È sempre felice di consigliare i clienti e di aiutarli a trovare i prodotti giusti per loro.
+                            Se cercate prodotti artigianali alimentari di alta qualità, questo è il posto giusto per voi
+                            e, non ultimo, il proprietario ha sempre una battuta pronta e un sorriso, e devo dire che
+                            si passano minuti piacevoli di conversazione.”
+                        </span>
+                    </p>
+
+                    <button class="read-more" onclick="leggi(this)">
+                        Continua a leggere ↓
+                    </button>
+
+                    <span class="review-author">— Gianfranco C.</span>
+
+                </article>
+
+
+                <!-- RECENSIONE 2 -->
+
+                <article>
+
+                    <div class="stars">★★★★★</div>
+
+                    <p>
+                        <span class="review-short">
+                            “Personale molto gentile e disponibile a soddisfare tutti i tipi di palati.
+                            Selezione di vini sfusi e in bottiglia, oltre a birre "di tutti i colori"...
+                        </span>
+
+                        <span class="review-long">
+                            Prodotti tipici regionali, vari formati di pasta, conserve, sughi e marmellate.
+                            Mozzarelle o prodotti freschi campani, su prenotazione.”
+                        </span>
+                    </p>
+
+                    <button class="read-more" onclick="leggi(this)">
+                        Continua a leggere ↓
+                    </button>
+
+                    <span class="review-author">— Manuela F.</span>
+
+                </article>
+
+
+               <!-- RECENSIONE 3 -->
+
+<article>
+
+    <div class="stars">★★★★★</div>
+
+    <p class="review-short">
+        “Birre artigianali buonissime, vino sfuso o in bottiglia.
+        Simpatia e gentilezza assicurata da "il Paolo" 😊”
+    </p>
+
+    <span class="review-author">— Roberta U.</span>
+
+</article>
+
+            </div>
+
+
+            <div class="review-note">
+                Le recensioni definitive possono essere sostituite con quelle reali di Google.
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <div class="logo">
+            <span>OFFICINA</span>
+            <b>DEL GUSTO</b>
+        </div>
+
+        <p>© 2026 Officina del Gusto · Rho</p>
+
+    </footer>
+
+
+    <script>
+
+        function leggi(button) {
+
+            const article = button.closest("article");
+            const testo = article.querySelector(".review-long");
+
+            if (testo.classList.contains("show")) {
+
+                testo.classList.remove("show");
+                button.textContent = "Continua a leggere ↓";
+
+            } else {
+
+                testo.classList.add("show");
+                button.textContent = "Mostra meno ↑";
+
+            }
+        }
+
+    </script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
